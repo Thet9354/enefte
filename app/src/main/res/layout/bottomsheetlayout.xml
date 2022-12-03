@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:id="@+id/txtView_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Enter ethereum address"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/editTxt_address"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:layout_gravity="center_horizontal"
+        android:hint="Address"
+        android:padding="10dp"
+        android:textColorHint="#AAB8C2"
+        android:textColor="#F5F8FA"
+        android:background="@drawable/custom_input"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:text="Confirm"
+        android:backgroundTint="#1D9BF0"
+        android:textAllCaps="false"/>
+
+
+</LinearLayout>
