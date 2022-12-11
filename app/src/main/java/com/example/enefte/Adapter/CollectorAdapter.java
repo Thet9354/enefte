@@ -1,6 +1,7 @@
 package com.example.enefte.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.enefte.Collectors_Item_Activity;
 import com.example.enefte.Model.NFTCollector;
 import com.example.enefte.R;
 
@@ -17,9 +19,9 @@ import java.util.ArrayList;
 
 public class CollectorAdapter extends RecyclerView.Adapter<CollectorAdapter.CardViewHolder>{
 
-    private ArrayList<NFTCollector> nftCollectorArrayList;
+    private final ArrayList<NFTCollector> nftCollectorArrayList;
 
-    private Context mcontext;
+    private final Context mcontext;
 
     public CollectorAdapter(Context mcontext, ArrayList<NFTCollector> nftCollectorArrayList) {
         this.nftCollectorArrayList = nftCollectorArrayList;
@@ -62,6 +64,24 @@ public class CollectorAdapter extends RecyclerView.Adapter<CollectorAdapter.Card
         holder.txtView_collectorUserName.setText(nftCollectorArrayList.get(position).getCollectorUserName());
         holder.txtView_profit.setText(nftCollectorArrayList.get(position).getEthereumChange());
 
+        holder.cv_trendingCollector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mcontext, Collectors_Item_Activity.class);
+                int pos = holder.getAdapterPosition();
+                intent.putExtra("Collector Name", nftCollectorArrayList.get(pos).getCollectorName());
+                intent.putExtra("Collector Username", nftCollectorArrayList.get(pos).getCollectorUserName());
+                intent.putExtra("Collector Balance", nftCollectorArrayList.get(pos).getEthereumBalance());
+                intent.putExtra("Collector Profit", nftCollectorArrayList.get(pos).getEthereumChange());
+
+                System.out.println(nftCollectorArrayList.get(pos).getCollectorName());
+                System.out.println(nftCollectorArrayList.get(pos).getCollectorUserName());
+                System.out.println(nftCollectorArrayList.get(pos).getEthereumBalance());
+                System.out.println(nftCollectorArrayList.get(pos).getEthereumChange());
+
+                mcontext.startActivity(intent);
+            }
+        });
 
 
     }
@@ -73,11 +93,14 @@ public class CollectorAdapter extends RecyclerView.Adapter<CollectorAdapter.Card
 
     public class CardViewHolder extends RecyclerView.ViewHolder {
 
-        private androidx.cardview.widget.CardView cv_trendingCollector;
+        private final androidx.cardview.widget.CardView cv_trendingCollector;
 
-        private ImageView imgView_trendingCollector;
+        private final ImageView imgView_trendingCollector;
 
-        private TextView txtView_collectorName, txtView_collectorUserName, txtView_collectorBalance, txtView_profit;
+        private final TextView txtView_collectorName;
+        private final TextView txtView_collectorUserName;
+        private final TextView txtView_collectorBalance;
+        private final TextView txtView_profit;
 
         public CardViewHolder(@NonNull View v) {
             super(v);

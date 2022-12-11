@@ -34,8 +34,8 @@ public class Home extends Fragment {
     private NFTAdapter nftAdapter;
     private CollectorAdapter collectorAdapter;
 
-    private ArrayList<FavNft> favNftArrayList = new ArrayList<>();
-    private ArrayList<NFTCollector> nftCollectorArrayList = new ArrayList<>();
+    private final ArrayList<FavNft> favNftArrayList = new ArrayList<>();
+    private final ArrayList<NFTCollector> nftCollectorArrayList = new ArrayList<>();
 
     int[] nftPics = {R.drawable.mosu_nft, R.drawable.clonex_1172, R.drawable.samurai_kid, R.drawable.legend_of_cockpunch,
     R.drawable.valhalla_1724, R.drawable.mindblown_by_lsd_219, R.drawable.cyber_thug_216};

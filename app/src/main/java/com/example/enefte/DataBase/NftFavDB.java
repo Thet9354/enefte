@@ -11,9 +11,9 @@ import androidx.annotation.Nullable;
 
 public class NftFavDB extends SQLiteOpenHelper {
 
-    private static int DB_VERSION = 1;
-    private static String DATABASE_NAME = "CoffeeDB";
-    private static String TABLE_NAME = "FavNftTable";
+    private static final int DB_VERSION = 1;
+    private static final String DATABASE_NAME = "CoffeeDB";
+    private static final String TABLE_NAME = "FavNftTable";
     public static String NFT_ID = "id";
     public static String NFT_NAME = "nftName";
     public static  String NFT_ARTIST = "nftArtist";
@@ -21,7 +21,7 @@ public class NftFavDB extends SQLiteOpenHelper {
     public static String NFT_IMAGE = "nftImage";
     public static String NFT_FAVOURITE_STATUS = "nftFavStatus";
 
-    private static String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
+    private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
             + NFT_ID + " TEXT," + NFT_NAME + " TEXT,"
             + NFT_ARTIST + " TEXT," + NFT_CATEGORY + " TEXT,"
             + NFT_IMAGE + " TEXT," + NFT_FAVOURITE_STATUS +" TEXT)";
@@ -82,7 +82,7 @@ public class NftFavDB extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String sql = "UPDATE " + TABLE_NAME + " SET  "+ NFT_FAVOURITE_STATUS+" ='0' WHERE "+NFT_ID+"="+id+"";
         db.execSQL(sql);
-        Log.d("remove", id.toString());
+        Log.d("remove", id);
 
     }
 

@@ -43,19 +43,19 @@ public class SliderAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
-        return view == (LinearLayout) o;
+        return view == o;
     }
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
-        layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slide_layout, container, false);
 
-        TextView txtView_heading = (TextView) view.findViewById(R.id.txtView_heading);
-        TextView txtView_heading2 = (TextView) view.findViewById(R.id.txtView_heading2);
-        ImageView imgView_onBoarding = (ImageView) view.findViewById(R.id.imgView_onBoarding);
+        TextView txtView_heading = view.findViewById(R.id.txtView_heading);
+        TextView txtView_heading2 = view.findViewById(R.id.txtView_heading2);
+        ImageView imgView_onBoarding = view.findViewById(R.id.imgView_onBoarding);
 
         txtView_heading.setText(slide_headings[position]);
         imgView_onBoarding.setImageResource(slide_images[position]);

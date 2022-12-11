@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15202B"
+    android:orientation="vertical"
+    tools:context=".NFT_Item_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/arrowback_ic" />
+
+                <ImageView
+                    android:id="@+id/btn_share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/share"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+                <ImageView
+                    android:id="@+id/btn_filter"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/funnel"
+                    android:layout_toLeftOf="@+id/btn_share"
+                    android:layout_marginEnd="15dp"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgView_nft"
+                android:layout_width="wrap_content"
+                android:layout_height="310dp"
+                android:src="@drawable/mosu_nft"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/txtView_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Karafuru"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/verified"
+                    android:layout_toRightOf="@+id/txtView_artist"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtView_nftName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_artist"
+                    android:layout_marginTop="8dp"
+                    android:text="Mosu #19730"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_creator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_nftName"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_artist"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/marble_ball" />
+
+                    <TextView
+                        android:id="@+id/txtView_createdBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Created by"
+                        android:textColor="#AAB8C2"
+                        android:textSize="12sp"
+                        android:layout_toRightOf="@+id/imgView_artist"
+                        android:layout_marginStart="15dp"/>
+
+                    <TextView
+                        android:id="@+id/txtView_creator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtView_createdBy"
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@+id/imgView_artist"
+                        android:text="KarafuruDeployer"
+                        android:textColor="#F5F8FA"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_owner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_nftName"
+                    android:layout_toRightOf="@+id/rel_creator"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_owner"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/owner" />
+
+                    <TextView
+                        android:id="@+id/txtView_ownedBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@+id/imgView_owner"
+                        android:text="Owned by"
+                        android:textSize="12sp"
+                        android:textColor="#AAB8C2" />
+
+                    <TextView
+                        android:id="@+id/txtView_owner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtView_ownedBy"
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@+id/imgView_owner"
+                        android:text="Wakanabe420"
+                        android:textColor="#F5F8FA"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtView_nftDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel_creator"
+                    android:layout_marginTop="20dp"
+                    android:text="Karafuru is home to 5,555 generative arts where colors \nreign supreme. Leave the drab reality and enter the \nworld of Karafuru by Museum of Toys."
+                    android:textColor="#F5F8FA"
+                    android:textSize="12sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_nftDesc"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/currentBid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Bid"
+                        android:textColor="#AAB8C2"
+                        android:textSize="10sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/currentBid"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imgView_ethereum"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ethereum_ic" />
+
+                        <TextView
+                            android:id="@+id/txtView_nftPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:layout_toRightOf="@+id/imgView_ethereum"
+                            android:text="2,75 ETH"
+                            android:textColor="#F5F8FA"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_nftDesc"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:id="@+id/endsIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Bid"
+                        android:textColor="#AAB8C2"
+                        android:textSize="10sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/endsIn"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/txtView_endsIn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:text="June 21, 2022 at 23.00"
+                            android:textColor="#F5F8FA"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:gravity="center_vertical"
+                android:background="#253341"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/currentBid"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_eth"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ethereum_ic" />
+
+                    <TextView
+                        android:id="@+id/txtView_bidPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toRightOf="@+id/imgView_eth"
+                        android:text="2,75 ETH"
+                        android:textColor="#F5F8FA"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_bid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="Place a Bid"
+                    android:drawableLeft="@drawable/bid_wallet"
+                    android:backgroundTint="#1D9BF0"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="14sp"
+                    android:padding="10dp"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

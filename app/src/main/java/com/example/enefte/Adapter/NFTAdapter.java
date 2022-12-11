@@ -1,6 +1,7 @@
 package com.example.enefte.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.enefte.DataBase.NftFavDB;
 import com.example.enefte.Model.FavNft;
 import com.example.enefte.Model.NFTs;
+import com.example.enefte.NFT_Item_Activity;
 import com.example.enefte.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,15 +29,15 @@ import java.util.ArrayList;
 public class NFTAdapter extends RecyclerView.Adapter<NFTAdapter.CardViewHolder>{
 
     private ArrayList<NFTs> mArrayListNFT;
-    private ArrayList<FavNft> mArrayListFavNft;
+    private final ArrayList<FavNft> mArrayListFavNft;
     private NftFavDB nftFavDB;
     private Context mcontext;
 
     public NFTAdapter(Context mcontext, ArrayList<FavNft> mArrayListFavNft) {
-        this.mArrayListFavNft = mArrayListFavNft;
         this.mcontext = mcontext;
-    }
+        this.mArrayListFavNft = mArrayListFavNft;
 
+    }
 
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
@@ -65,12 +67,29 @@ public class NFTAdapter extends RecyclerView.Adapter<NFTAdapter.CardViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NFTAdapter.CardViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
 
         holder.txtView_nftName.setText(mArrayListFavNft.get(position).getNftName());
         holder.txtView_artist.setText(mArrayListFavNft.get(position).getNftArtist());
         holder.imgView_nft.setImageResource(mArrayListFavNft.get(position).getNftImage());
         holder.imgView_artist.setImageResource(mArrayListFavNft.get(position).getNftArtistImage());
+
+        holder.cv_nft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mcontext, NFT_Item_Activity.class);
+                int pos = holder.getAdapterPosition();
+                i.putExtra("NFT Name", mArrayListFavNft.get(pos).getNftName());
+                i.putExtra("NFT Artist", mArrayListFavNft.get(pos).getNftArtist());
+                i.putExtra("NFT ID", mArrayListFavNft.get(pos).getNftID());
+
+                System.out.println(mArrayListFavNft.get(pos).getNftName());
+                System.out.println(mArrayListFavNft.get(pos).getNftArtist());
+                System.out.println(mArrayListFavNft.get(pos).getNftID());
+
+                mcontext.startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -80,12 +99,16 @@ public class NFTAdapter extends RecyclerView.Adapter<NFTAdapter.CardViewHolder>{
 
     public class CardViewHolder extends RecyclerView.ViewHolder {
 
-        private androidx.cardview.widget.CardView cv_nft;
-        private ImageView imgView_nft, imgView_artist;
-        private Button btn_favNft;
-        private TextView txtView_nftName, txtView_durationLeft, txtView_artist, txtView_nftPrice;
+        private final androidx.cardview.widget.CardView cv_nft;
+        private final ImageView imgView_nft;
+        private final ImageView imgView_artist;
+        private final Button btn_favNft;
+        private final TextView txtView_nftName;
+        private final TextView txtView_durationLeft;
+        private final TextView txtView_artist;
+        private final TextView txtView_nftPrice;
 
-        public CardViewHolder(@NonNull View itemView) {
+        public CardViewHolder(View itemView) {
             super(itemView);
 
             //CardView

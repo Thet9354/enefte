@@ -69,10 +69,7 @@ public class SetUpProfile_Activity extends AppCompatActivity {
     }
 
     private boolean validateInput() {
-        if (!validateUsername() | !validateEmail() | !validateBio())
-            return false;
-        else
-            return true;
+        return !(!validateUsername() | !validateEmail() | !validateBio());
     }
 
     private boolean validateBio() {
