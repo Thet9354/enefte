@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#15202B"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_trendingCollector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="#15202B"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgView_trendingCollector"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ghozali_everyday"/>
+
+            <TextView
+                android:id="@+id/txtView_collectorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ghozali Everyday"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="-15dp"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/txtView_collectorUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ghozali_Ghozalu"
+                android:textColor="#AAB8C2"
+                android:gravity="start"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="-23dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp">
+
+                <ImageView
+                    android:id="@+id/imgView_ethereum"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ethereum_ic"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtView_collectorBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgView_ethereum"
+                    android:text="4,218"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView_profit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgView_ethereum"
+                    android:layout_marginStart="15dp"
+                    android:text="+25,00%"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#00CB6A"
+                    android:textSize="12sp"/>
+
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,3 +1,66 @@
 <resources>
     <string name="app_name">enefte</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="nft_name">
+        <item name="Mosu">Mosu #1930</item>
+        <item name="CloneX">CloneX #1172</item>
+        <item name="SamuraiKid">Samurai #103</item>
+        <item name="CockPunch">COCKPUNCH™ #1182</item>
+        <item name="Valhalla">Valhalla #1724</item>
+        <item name="Mindblown">Mindblown #219</item>
+        <item name="CyberThug">Cyber Thug #216</item>
+    </string-array>
+
+    <string-array name="nft_artist">
+        <item name="Karafuru">Karafuru</item>
+        <item name="RTFKTLONEXTM">RTFKTLONEXTM</item>
+        <item name="Roselia">Roselia</item>
+        <item name="WOONYC">WOONYC</item>
+        <item name="Valhalla">Valhalla</item>
+        <item name="Mindblown">Mindblown by LSD</item>
+        <item name="CyberThug">Cyber Thug</item>
+    </string-array>
+
+    <string-array name="trending_collector_name">
+        <item name="Ghozali_Everyday">Ghozali Everyday</item>
+        <item name="Cryptopunks">Cryptopunks</item>
+        <item name="1337_skulls">1337 skulls</item>
+        <item name="ShikibuWorld">Shikibu World</item>
+        <item name="BeanzOfficials">Beanz Officials</item>
+        <item name="rektguy">rektguy</item>
+        <item name="Metabatch">Metabatch</item>
+    </string-array>
+
+    <string-array name="trending_collector_username">
+        <item name="Ghozali_Everyday">Ghozali_Everyday</item>
+        <item name="Cryptopunks">Cryptopunksss</item>
+        <item name="1337_skulls">1337_skulls</item>
+        <item name="ShikibuWorld">Shikibu_World</item>
+        <item name="BeanzOfficials">Beanz_Officials</item>
+        <item name="rektguy">rektguyyys</item>
+        <item name="Metabatch">Metabatches</item>
+    </string-array>
+
+    <string-array name="trending_collector_ethereum">
+        <item name="Ghozali_Everyday">4,218</item>
+        <item name="Cryptopunks">4,017</item>
+        <item name="1337_skulls">127</item>
+        <item name="ShikibuWorld">116</item>
+        <item name="BeanzOfficials">120</item>
+        <item name="rektguy">142</item>
+        <item name="Metabatch">33</item>
+    </string-array>
+
+    <string-array name="trending_collector_profit">
+        <item name="Ghozali_Everyday">+23,00%</item>
+        <item name="Cryptopunks">-32,01%</item>
+        <item name="1337_skulls">+1,437%</item>
+        <item name="ShikibuWorld">+465%</item>
+        <item name="BeanzOfficials">+487%</item>
+        <item name="rektguy">+231%</item>
+        <item name="Metabatch">+1,019%</item>
+    </string-array>
+
 </resources>

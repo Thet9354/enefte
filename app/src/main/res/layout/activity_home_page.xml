@@ -1,65 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#15202B"
     tools:context=".HomePage_Activity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/smaill_profile"
-                    android:layout_alignParentEnd="true"/>
-
-                <ImageView
-                    android:id="@+id/imgView_ethereum"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ethereum_ic"
-                    android:layout_centerVertical="true"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="26,031"
-                    android:textColor="@color/white"
-                    android:layout_toRightOf="@+id/imgView_ethereum"
-                    android:layout_marginStart="10dp"
-                    android:layout_centerVertical="true"
-                    android:textStyle="bold"/>
-
-            </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_menuTab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"/>
 
 
-        </LinearLayout>
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_corners"
+        android:elevation="8dp"
+        app:cnb_menuResource="@menu/navigation"
+        app:cnb_orientationMode="horizontal"
+        app:cnb_radius="28dp"
+        app:cnb_unselectedColor="@color/white" />
 
-    </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>
