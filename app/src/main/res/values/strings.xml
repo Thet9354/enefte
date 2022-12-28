@@ -63,4 +63,14 @@
         <item name="Metabatch">+1,019%</item>
     </string-array>
 
+    <string name="karafuru_desc">Karafuru is home to 5,555 generative arts where colors \nreign supreme. Leave the drab reality and enter the \nworld of Karafuru by Museum of Toys.</string>
+    <string name="clonex_desc">20,000 next-gen Avatars, by RTFKT and Takashi Murakami </string>
+    <string name="roselia_desc">Samurai Kids が世界やこの空間を変えるわけではありません。彼らはただ自由と平和を望んでいる美しい子供たちです!</string>
+    <string name="cockpunch_desc">The Legend of COCKPUNCH™ is the tale of a fantastical realm, a universe of the bizarre from the mind of bestselling author Tim Ferriss. Artwork and stories are the gateway drug in this Emergent Long Fiction (ELF) project.</string>
+    <string name="valhalla_desc">Valhalla represents more than a collection of digital avatars. It represents \ndecades of gaming culture: the clutch plays, the ELO grind, the OT wins. Visit \njoinvalhalla.com for more details.</string>
+    <string name="mindblown_lsd_desc">Deeper down the rabbit hole we go, this time "Mindblown" by experimental artist LSD. Hold Mindblown to gain access to a growing art ecosystem and future drops!</string>
+    <string name="cyber_thug_desc">360 Cyber Thugs. Call them gutterats, night crawlers, trash or streetscum; the gangs are the ultimate rulers of the city night.</string>
+
+
+    <string name="about_valhalla">Valhalla is a crypto native brand for gamers. \n\nValhalla represents more than a collection of digital avatars. It represents decades of gaming culture: the clutch plays, the ELO grind, the OT wins. Visit joinvalhalla.com for more details.</string>
 </resources>

@@ -54,7 +54,9 @@ public class Home extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        mContext = getActivity();
+
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         // Inflate the layout for this fragment
         return rootView;
@@ -80,7 +82,7 @@ public class Home extends Fragment {
         //set layoutmanager for recyclerview.
         rv_nftMarketPlace.setLayoutManager(llm);
 
-        new LoadAllPopularDestination().execute();
+        new LoadFavNFT().execute();
 
 
 
@@ -130,7 +132,7 @@ public class Home extends Fragment {
     FavNft favNft;
     NFTCollector nftCollector;
 
-    class LoadAllPopularDestination extends AsyncTask<String, String, String> {
+    class LoadFavNFT extends AsyncTask<String, String, String> {
 
         @Override
         protected void onPreExecute() {

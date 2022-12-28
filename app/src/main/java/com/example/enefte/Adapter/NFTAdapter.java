@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.enefte.DataBase.NftFavDB;
@@ -99,7 +100,7 @@ public class NFTAdapter extends RecyclerView.Adapter<NFTAdapter.CardViewHolder>{
 
     public class CardViewHolder extends RecyclerView.ViewHolder {
 
-        private final androidx.cardview.widget.CardView cv_nft;
+        private final CardView cv_nft;
         private final ImageView imgView_nft;
         private final ImageView imgView_artist;
         private final Button btn_favNft;

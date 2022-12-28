@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Enefte"
         tools:targetApi="31">
         <activity
+            android:name=".NFT_Item_Details_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Collectors_Item_Activity"
             android:exported="false" />
         <activity
