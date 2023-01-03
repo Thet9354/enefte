@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -26,6 +27,8 @@ public class NFT_Item_Activity extends AppCompatActivity {
     private String nftImgName, nftImgArtist, aboutCollection;
 
     private Intent intent;
+
+    private RelativeLayout rel_creator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +72,11 @@ public class NFT_Item_Activity extends AppCompatActivity {
         btn_share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: Allow user to share details of this nft in various other apps
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Check out this cool ass NFT");
+                intent.putExtra(Intent.EXTRA_TEXT, "Your application link here");
+                startActivity(Intent.createChooser(intent, "Share Via"));
             }
         });
 
@@ -77,6 +84,13 @@ public class NFT_Item_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //TODO: Lead user to a bidding detail page for this piece of art
+            }
+        });
+
+        rel_creator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
@@ -187,6 +201,10 @@ public class NFT_Item_Activity extends AppCompatActivity {
 
         //Button
         btn_bid = findViewById(R.id.btn_bid);
+
+        //RelativeLayout
+        rel_creator = findViewById(R.id.rel_creator);
+
 
     }
 

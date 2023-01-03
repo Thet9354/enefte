@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_nft"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="@dimen/cardview_default_elevation"
+        card_view:cardUseCompatPadding="true">
+
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="290dp"
+            android:gravity="center_vertical"
+            android:background="#253341"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgView_nft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp"
+                android:adjustViewBounds="true"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="false"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mosu_nft" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/art_category"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <Button
+                android:id="@+id/btn_favNft"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_favourite_outline"
+                android:backgroundTint="#253341"
+                android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtView_artist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#AAB8C2"
+                        android:textSize="12sp"
+                        android:text="Karafuru"/>
+
+                    <TextView
+                        android:id="@+id/txtView_nftName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtView_artist"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:textSize="14dp"
+                        android:text="Otan #2622"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

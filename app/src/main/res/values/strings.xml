@@ -63,6 +63,13 @@
         <item name="Metabatch">+1,019%</item>
     </string-array>
 
+    <string-array name="moreFromThisNFT">
+        <item name="Otan #2622">Otan #2622</item>
+        <item name="Kuyaku #315">Kuyaku #315</item>
+        <item name="Kiba #5395">Kiba #5395</item>
+    </string-array>
+
+
     <string name="karafuru_desc">Karafuru is home to 5,555 generative arts where colors \nreign supreme. Leave the drab reality and enter the \nworld of Karafuru by Museum of Toys.</string>
     <string name="clonex_desc">20,000 next-gen Avatars, by RTFKT and Takashi Murakami </string>
     <string name="roselia_desc">Samurai Kids が世界やこの空間を変えるわけではありません。彼らはただ自由と平和を望んでいる美しい子供たちです!</string>

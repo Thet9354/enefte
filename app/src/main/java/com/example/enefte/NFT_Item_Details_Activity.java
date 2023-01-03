@@ -9,8 +9,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.example.enefte.Adapter.NFTItemDetailAdapter;
@@ -46,6 +48,24 @@ public class NFT_Item_Details_Activity extends AppCompatActivity {
 
     private void pageDirectories() {
 
+        btn_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Check out this cool ass NFT");
+                intent.putExtra(Intent.EXTRA_TEXT, "Your application link here");
+                startActivity(Intent.createChooser(intent, "Share Via"));
+
+            }
+        });
+
+        imgView_nft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void initWidget() {
