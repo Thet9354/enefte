@@ -96,6 +96,7 @@
                 android:layout_marginTop="10dp">
 
                 <TextView
+                    android:id="@+id/txtView_collector"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Karafuru"
@@ -104,6 +105,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/txtView_collectorBio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Karafuru is home to 5,555 generative arts where colors reign supreme. Leave the drab reality and enter the world of Karafuru by Museum of Toys."
@@ -118,7 +120,6 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_NNP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -228,7 +229,7 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
         app:tabInlineLabel="true"

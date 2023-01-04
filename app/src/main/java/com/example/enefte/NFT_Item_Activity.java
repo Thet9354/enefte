@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.enefte.Collections.MainCollection;
+
 import java.util.Locale;
 
 public class NFT_Item_Activity extends AppCompatActivity {
@@ -90,7 +92,8 @@ public class NFT_Item_Activity extends AppCompatActivity {
         rel_creator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), MainCollection.class);
+                startActivity(intent);
             }
         });
     }
