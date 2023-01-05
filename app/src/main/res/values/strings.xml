@@ -69,6 +69,50 @@
         <item name="Kiba #5395">Kiba #5395</item>
     </string-array>
 
+    <string-array name="Collection_Items_Activity_Status">
+        <item name="Sale">Sale</item>
+        <item name="Bid">Bid</item>
+        <item name="Bid">Bid</item>
+    </string-array>
+
+    <string-array name="Collection_Items_Activity_NftPrice">
+        <item name="2,48">2,48</item>
+        <item name="1,889">1,889</item>
+        <item name="1,889">1,889</item>
+    </string-array>
+
+    <string-array name="Collection_Items_Activity_Duration">
+        <item name="15min">15 Minutes ago</item>
+        <item name="18min">18 Minutes ago</item>
+        <item name="25min">25 Minutes ago</item>
+    </string-array>
+
+    <string-array name="Collection_Items_Activity_UsdPrice">
+        <item name="15min">15 Minutes ago</item>
+        <item name="18min">18 Minutes ago</item>
+        <item name="25min">25 Minutes ago</item>
+    </string-array>
+
+    <string-array name="Collection_Items_Activity_quantity">
+        <item name="1">1</item>
+        <item name="1">1</item>
+        <item name="1">1</item>
+    </string-array>
+
+    <string-array name="Collection_Items_Activity_from">
+        <item name="TVNOY1718">TVNOY1718</item>
+        <item name="TVNAGW1718">TVNAGW1718</item>
+        <item name="TYWW1718">TYWW1718</item>
+    </string-array>
+
+    <string-array name="Collection_Items_Activity_to">
+        <item name="Unnamed">Unnamed</item>
+        <item name="Unnamed">Unnamed</item>
+        <item name="Unnamed">Unnamed</item>
+    </string-array>
+
+
+
 
     <string name="karafuru_desc">Karafuru is home to 5,555 generative arts where colors \nreign supreme. Leave the drab reality and enter the \nworld of Karafuru by Museum of Toys.</string>
     <string name="clonex_desc">20,000 next-gen Avatars, by RTFKT and Takashi Murakami </string>
@@ -77,7 +121,5 @@
     <string name="valhalla_desc">Valhalla represents more than a collection of digital avatars. It represents \ndecades of gaming culture: the clutch plays, the ELO grind, the OT wins. Visit \njoinvalhalla.com for more details.</string>
     <string name="mindblown_lsd_desc">Deeper down the rabbit hole we go, this time "Mindblown" by experimental artist LSD. Hold Mindblown to gain access to a growing art ecosystem and future drops!</string>
     <string name="cyber_thug_desc">360 Cyber Thugs. Call them gutterats, night crawlers, trash or streetscum; the gangs are the ultimate rulers of the city night.</string>
-
-
     <string name="about_valhalla">Valhalla is a crypto native brand for gamers. \n\nValhalla represents more than a collection of digital avatars. It represents decades of gaming culture: the clutch plays, the ELO grind, the OT wins. Visit joinvalhalla.com for more details.</string>
 </resources>
