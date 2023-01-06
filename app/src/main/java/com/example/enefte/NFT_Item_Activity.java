@@ -86,6 +86,8 @@ public class NFT_Item_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //TODO: Lead user to a bidding detail page for this piece of art
+                Intent intent = new Intent(getApplicationContext(), Bid_Details_Activity.class);
+                startActivity(intent);
             }
         });
 

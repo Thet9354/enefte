@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_bidHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="@dimen/cardview_default_elevation"
+        card_view:cardUseCompatPadding="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center_vertical"
+            android:background="#253341"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_acc"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/curiousjoe"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20dp">
+
+                        <TextView
+                            android:id="@+id/txtView_accName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CuriousJoe"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rel_bidPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp">
+
+                            <ImageView
+                                android:id="@+id/imgView_ethereum"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerVertical="true"
+                                android:padding="5dp"
+                                android:src="@drawable/ethereum_ic" />
+
+                            <TextView
+                                android:id="@+id/txtView_nftPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="5dp"
+                                android:layout_toRightOf="@+id/imgView_ethereum"
+                                android:text="2,75"
+                                android:textColor="#F5F8FA"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtView_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 Minutes ago"
+                            android:layout_below="@+id/rel_bidPrice"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="#AAB8C2"/>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/USDPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="USD Price"
+                            android:textSize="11sp"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#AAB8C2"/>
+
+                        <TextView
+                            android:id="@+id/txtView_USDPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/USDPrice"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:layout_centerHorizontal="true"
+                            android:text="$6.423,8"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="70dp">
+
+                        <TextView
+                            android:id="@+id/floorDiff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Floor Diff."
+                            android:textSize="11sp"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#AAB8C2"/>
+
+                        <TextView
+                            android:id="@+id/txtView_floorDiff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/floorDiff"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:layout_centerHorizontal="true"
+                            android:text="17% below"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="70dp">
+
+                        <TextView
+                            android:id="@+id/Expiration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expiration"
+                            android:textSize="11sp"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#AAB8C2"/>
+
+                        <TextView
+                            android:id="@+id/txtView_expiration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Expiration"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:layout_centerHorizontal="true"
+                            android:text="6 Months"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

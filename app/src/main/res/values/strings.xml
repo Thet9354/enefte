@@ -111,7 +111,53 @@
         <item name="Unnamed">Unnamed</item>
     </string-array>
 
+    <string-array name="bidHistory_accName">
+        <item name="CuriousJoe">CuriousJoe</item>
+        <item name="Karafuru">Unnamed</item>
+        <item name="Wakanabe420">Wakanabe420</item>
+        <item name="Naufal">Naufal Abshar</item>
+        <item name="Kevin">Kevin</item>
+    </string-array>
 
+    <string-array name="bidHistory_ethPrice">
+        <item name="12">12 ETH</item>
+        <item name="7373">7373 ETH</item>
+        <item name="46119">46119 ETH</item>
+        <item name="381">381 ETH</item>
+        <item name="13">13 ETH</item>
+    </string-array>
+
+    <string-array name="bidHistory_duration">
+        <item name="15">13 Minutes ago</item>
+        <item name="23">23 Minutes ago</item>
+        <item name="19">19 Minutes ago</item>
+        <item name="56">56 Minutes ago</item>
+        <item name="33">33 Minutes ago</item>
+    </string-array>
+
+    <string-array name="bidHistory_usdPrice">
+        <item name="5,180.48">$5,180.48</item>
+        <item name="6,382.76">$6,382.76</item>
+        <item name="10,3731.91">$10,3731.91</item>
+        <item name="1,3712.73">$1,3712.73</item>
+        <item name="3,8472.18">$,8472.18</item>
+    </string-array>
+
+    <string-array name="bidHistory_expiration">
+        <item name="6">6 Months</item>
+        <item name="5">5 Months</item>
+        <item name="10">10 Months</item>
+        <item name="2">2 Months</item>
+        <item name="3">3 Months</item>
+    </string-array>
+
+    <string-array name="bidHistory_floorDiff">
+        <item name="10%">10%</item>
+        <item name="12%">12%</item>
+        <item name="15%">15%</item>
+        <item name="3%">3%</item>
+        <item name="25%">25%</item>
+    </string-array>
 
 
     <string name="karafuru_desc">Karafuru is home to 5,555 generative arts where colors \nreign supreme. Leave the drab reality and enter the \nworld of Karafuru by Museum of Toys.</string>
