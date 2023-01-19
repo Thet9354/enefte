@@ -3,6 +3,8 @@ package com.example.enefte;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.enefte.Collections.MainCollection;
 
+import java.io.ByteArrayOutputStream;
 import java.util.Locale;
 
 public class NFT_Item_Activity extends AppCompatActivity {
@@ -24,7 +27,7 @@ public class NFT_Item_Activity extends AppCompatActivity {
 
     private Button btn_bid;
 
-    private String nftName, nftArtist;
+    private String nftName, nftArtist, nftPrice, nftArtistDesc;
 
     private String nftImgName, nftImgArtist, aboutCollection;
 
@@ -87,6 +90,18 @@ public class NFT_Item_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 //TODO: Lead user to a bidding detail page for this piece of art
                 Intent intent = new Intent(getApplicationContext(), Bid_Details_Activity.class);
+                Bitmap bitmap = ((BitmapDrawable) imgView_nft.getDrawable()).getBitmap();
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                byte[] byteArray = stream.toByteArray();
+                Bundle extras = new Bundle();
+                extras.putByteArray("image", byteArray);
+
+                intent.putExtra("Nft Name", nftName);
+                intent.putExtra("Nft Artist", nftArtist);
+                intent.putExtra("Nft Price", nftPrice);
+                intent.putExtra("Artist Desc", nftArtistDesc);
+                intent.putExtra("Nft Image", extras);
                 startActivity(intent);
             }
         });
@@ -95,6 +110,7 @@ public class NFT_Item_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainCollection.class);
+
                 startActivity(intent);
             }
         });
@@ -173,6 +189,10 @@ public class NFT_Item_Activity extends AppCompatActivity {
 
         int artistID = getResources().getIdentifier(nftImgArtist.toLowerCase(Locale.ROOT), "drawable", getPackageName());
         imgView_artist.setImageResource(artistID);
+
+        nftPrice = txtView_nftPrice.getText().toString();
+        nftArtistDesc = txtView_nftDesc.getText().toString();
+
 
 
     }

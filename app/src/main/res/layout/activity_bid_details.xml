@@ -92,7 +92,7 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_gravity="center_vertical"
-                            android:src="@drawable/minus" />
+                            android:src="@drawable/ic_minus" />
 
                         <RelativeLayout
                             android:id="@+id/rel_bidPrice"
@@ -131,7 +131,7 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_gravity="center_vertical"
-                            android:src="@drawable/plus" />
+                            android:src="@drawable/ic_plus" />
 
                     </LinearLayout>
 

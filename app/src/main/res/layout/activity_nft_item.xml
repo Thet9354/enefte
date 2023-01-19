@@ -210,7 +210,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="5dp"
                             android:layout_toRightOf="@+id/imgView_ethereum"
-                            android:text="2,75 ETH"
+                            android:text="275"
                             android:textColor="#F5F8FA"
                             android:textSize="12sp" />
 

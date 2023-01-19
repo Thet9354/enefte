@@ -33,7 +33,7 @@ public class HomePage_Activity extends AppCompatActivity {
         fragment_container = findViewById(R.id.fragment_container);
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
-        bottom_nav_bar.setItemSelected(R.id.bottom_nav_bar, true);
+        bottom_nav_bar.setItemSelected(R.id.navigation_home, true);
         bottomMenu();
     }
 
@@ -44,15 +44,15 @@ public class HomePage_Activity extends AppCompatActivity {
                 Fragment fragment = null;
                 switch(i)
                 {
-                    case R.id.navigation_bookflight:
+                    case R.id.navigation_home:
                         fragment = new Home();
                         break;
 
-                    case R.id.navigation_mapview:
+                    case R.id.navigation_search:
                         fragment = new Search();
                         break;
 
-                    case R.id.navigation_flightstatus:
+                    case R.id.navigation_marketPlace:
                         fragment = new MarketPlace();
                         break;
 

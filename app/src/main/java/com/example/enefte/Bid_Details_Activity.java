@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +22,10 @@ import com.example.enefte.Fragment.Details;
 import com.example.enefte.Model.BidHistory;
 import com.example.enefte.Model.ForYouNFT;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class Bid_Details_Activity extends AppCompatActivity {
 
@@ -29,10 +37,20 @@ public class Bid_Details_Activity extends AppCompatActivity {
 
     private RecyclerView rv_bidHistory;
 
+    private String nftName, nftPrice, nftArtistDesc;
+
+    private Bitmap bmp;
+
+    Calendar myCalendar;
+
+    DatePickerDialog.OnDateSetListener date;
+
     private BidHistoryAdapter bidHistoryAdapter;
     private final ArrayList<BidHistory> bidHistoryArrayList = new ArrayList<>();
 
     int[] nftPics = {R.drawable.curiousjoe, R.drawable.moonowls, R.drawable.owner, R.drawable.rektguy, R.drawable.roselia};
+
+    private int counter;
 
     Intent intent;
 
@@ -43,6 +61,8 @@ public class Bid_Details_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_bid_details);
 
         intent = getIntent();
+
+        myCalendar = Calendar.getInstance();
 
         initWidget();
 
@@ -56,12 +76,27 @@ public class Bid_Details_Activity extends AppCompatActivity {
     private void getTransferredData() {
 
         //TODO: Get the transferred data from the page before
+
+        nftName = intent.getStringExtra("Nft Name");
+        nftPrice = intent.getStringExtra("Nft Price");
+        nftArtistDesc = intent.getStringExtra("Artist Desc");
+
+        Bundle extras = getIntent().getBundleExtra("Nft Image");
+        byte[] byteArray = extras.getByteArray("image");
+        bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
     }
 
     private void initUI() {
 
-        initRecView();
+        imgView_nft.setImageBitmap(bmp);
+        txtView_nftName.setText(nftName);
+        txtView_nftDesc.setText(nftArtistDesc);;
+        txtView_nftPrice.setText(nftPrice);
 
+        counter = Integer.parseInt(txtView_nftPrice.getText().toString());
+
+        initRecView();
     }
 
     private void initRecView() {
@@ -146,7 +181,68 @@ public class Bid_Details_Activity extends AppCompatActivity {
 
     private void pageDirectories() {
 
+        txtView_bidExpDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new DatePickerDialog(Bid_Details_Activity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
 
+        date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+
+        btn_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                decreaseCounter(view);
+            }
+        });
+
+        btn_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                increaseCounter(view);
+            }
+        });
+    }
+
+    private void increaseCounter(View view) {
+        counter = counter + 1;
+        display(counter);
+    }
+
+    private void decreaseCounter(View view) {
+        if (counter > 0) {
+            counter -= 1;
+        }
+        display(counter);
+    }
+
+    private void display(int number) {
+        txtView_nftPrice.setText("" + number);
+    }
+
+    private void updateLabel() {
+
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        txtView_bidExpDate.setText(sdf.format(myCalendar.getTime()));
     }
 
     private void initWidget() {
