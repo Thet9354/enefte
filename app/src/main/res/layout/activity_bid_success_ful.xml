@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#15202B"
+    tools:context=".BidSuccessFul_Activity">
+
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:src="@drawable/bid_successful_ic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bid Placed"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your order was placed successfully For more details, check Offers Status in tab offers made."
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

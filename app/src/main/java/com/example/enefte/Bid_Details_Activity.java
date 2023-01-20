@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.example.enefte.Adapter.BidHistoryAdapter;
 import com.example.enefte.Adapter.FYCAdapter;
@@ -53,6 +55,8 @@ public class Bid_Details_Activity extends AppCompatActivity {
     private int counter;
 
     Intent intent;
+
+    private String bidPrice, bidExpDate, bidExpTime;
 
 
     @Override
@@ -219,6 +223,85 @@ public class Bid_Details_Activity extends AppCompatActivity {
                 increaseCounter(view);
             }
         });
+
+        txtView_bidExpTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Calendar calendar = Calendar.getInstance();
+                int hour = calendar.get(Calendar.HOUR_OF_DAY);
+                int minute = calendar.get(Calendar.MINUTE);
+
+                TimePickerDialog timePickerDialog = new TimePickerDialog(Bid_Details_Activity.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                                txtView_bidExpTime.setText(hourOfDay + ":" + minute);
+                            }
+                        }, hour, minute, false);
+
+                timePickerDialog.show();
+            }
+        });
+
+        btn_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                bidPrice = txtView_nftPrice.getText().toString();
+                bidExpDate = txtView_bidExpDate.getText().toString();
+                bidExpTime = txtView_bidExpTime.getText().toString();
+
+                validateDate();
+                validateTime();
+                validateInput();
+
+            }
+        });
+    }
+
+    private void validateInput() {
+
+        if (!validateDate() | !validateTime())
+            return;
+        else
+        {
+            //TODO: Create code for storing it in a db
+            startActivity(new Intent(getApplicationContext(), BidSuccessFul_Activity.class));
+        }
+    }
+
+    private boolean validateTime() {
+
+        if (bidExpTime.isEmpty())
+        {
+            txtView_bidExpTime.setError("Please input the Bid Expiration Time");
+            return false;
+        }
+        else if (bidExpTime.equals("Time"))
+        {
+            txtView_bidExpTime.setError("Invalid Bid Expiration Time");
+            return false;
+        }
+        else
+            return true;
+    }
+
+    private boolean validateDate() {
+
+        if (bidExpDate.isEmpty())
+        {
+            txtView_bidExpDate.setError("Please input the Bid Expiration Date");
+            return false;
+        }
+        else if (bidExpDate.equals("Date"))
+        {
+            txtView_bidExpDate.setError("Invalid Bid Expiration Date");
+            return false;
+        }
+        else
+            return true;
+
     }
 
     private void increaseCounter(View view) {
