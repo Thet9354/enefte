@@ -15,6 +15,13 @@
         android:theme="@style/Theme.Enefte"
         tools:targetApi="31">
         <activity
+            android:name=".EditProfile_Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".BidSuccessFul_Activity"
             android:exported="false">
             <meta-data

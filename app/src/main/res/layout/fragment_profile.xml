@@ -1,14 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#15202B"
     tools:context=".Fragment.Profile">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/imgView_profileBg"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@drawable/banner_photo"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/back_btn_bubble"/>
+
+            <ImageView
+                android:id="@+id/btn_share"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/share"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgView_myProfile"
+        android:layout_width="88dp"
+        android:layout_height="92dp"
+        android:src="@drawable/profilepic_icon"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-48dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_editProfile"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtView_nftName"
+        android:padding="5dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/text_bg_grey"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Edit Profile"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtView_profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kevin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginStart="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_walletAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/copy"/>
+
+            <TextView
+                android:id="@+id/txtView_walletAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0x841a...8a57"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_socials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_website"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/website"/>
+
+            <ImageView
+                android:id="@+id/btn_instagram"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/instagram"/>
+
+            <ImageView
+                android:id="@+id/btn_twitter"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/twitter"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtView_items_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="54"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#AAB8C2"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+                android:text="Items Total"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/txtView_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3,7K"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#AAB8C2"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+                android:text="Views"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtView_liked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1,2K"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#AAB8C2"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+                android:text="Liked"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:tabInlineLabel="true"
+        app:tabTextColor="#AAB8C2"
+        app:tabIndicatorColor="#1D9BF0"
+        app:tabSelectedTextColor="@color/white" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

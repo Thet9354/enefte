@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#15202B"
+    tools:context=".EditProfile_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save Changes"
+                    android:textColor="@color/white"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/round_back_blue"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgView_editProfilebg"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/edit_profilebg"/>
+
+            <ImageView
+                android:id="@+id/imgView_editProfilePic"
+                android:layout_width="88dp"
+                android:layout_height="92dp"
+                android:src="@drawable/edit_profilepic"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-48dp"/>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColorHint="#AAB8C2"
+                android:textColor="#F5F8FA"
+                android:background="@drawable/custom_input"
+                android:textSize="14sp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textSize="12sp"
+                    android:textColor="#AAB8C2"/>
+
+                <EditText
+                    android:id="@+id/editTxt_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thet Pine"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColorHint="#AAB8C2"
+                android:textColor="#F5F8FA"
+                android:background="@drawable/custom_input"
+                android:textSize="14sp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="12sp"
+                    android:textColor="#AAB8C2"/>
+
+                <EditText
+                    android:id="@+id/editTxt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="thetpine254@gmail.com"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColorHint="#AAB8C2"
+                android:textColor="#F5F8FA"
+                android:background="@drawable/custom_input"
+                android:textSize="14sp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bio"
+                    android:textSize="12sp"
+                    android:textColor="#AAB8C2"/>
+
+                <EditText
+                    android:id="@+id/editTxt_bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How do you create a single line of code to fuck around with your mum into believing that i like her but i just wanna ram her lmao"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:background="@null"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Links"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColorHint="#AAB8C2"
+                android:textColor="#F5F8FA"
+                android:background="@drawable/custom_input"
+                android:textSize="14sp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Twitter"
+                    android:textSize="12sp"
+                    android:textColor="#AAB8C2"/>
+
+                <EditText
+                    android:id="@+id/editTxt_twitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://twitter.com/kevin"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColorHint="#AAB8C2"
+                android:textColor="#F5F8FA"
+                android:background="@drawable/custom_input"
+                android:textSize="14sp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Twitter"
+                    android:textSize="12sp"
+                    android:textColor="#AAB8C2"/>
+
+                <EditText
+                    android:id="@+id/editTxt_instagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://www.instagram.com/kevin/?hl=en"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
