@@ -138,28 +138,6 @@ public class NFTAdapter extends RecyclerView.Adapter<NFTAdapter.CardViewHolder>{
                     nftFavDB.remove_fav(favNft.getNftID());
                     removeItem(position);
 
-//                    upvotesRefLike.runTransaction(new Transaction.Handler() {
-//                        @NonNull
-//                        @Override
-//                        public Transaction.Result doTransaction(@NonNull final MutableData mutableData) {
-//                            try {
-//                                Integer currentValue = mutableData.getValue(Integer.class);
-//                                if (currentValue == null) {
-//                                    mutableData.setValue(1);
-//                                } else {
-//                                    mutableData.setValue(currentValue - 1);
-//                                }
-//                            } catch (Exception e) {
-//                                throw e;
-//                            }
-//                            return Transaction.success(mutableData);
-//                        }
-//
-//                        @Override
-//                        public void onComplete(@Nullable DatabaseError databaseError, boolean b, @Nullable DataSnapshot dataSnapshot) {
-//                            System.out.println("Transaction completed");
-//                        }
-//                    });
                 }
             });
 

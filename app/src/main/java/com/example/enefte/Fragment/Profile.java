@@ -141,6 +141,10 @@ public class Profile extends Fragment {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         profileDetailAdapter = new ProfileDetailAdapter(fragmentManager, getLifecycle());
         view_pager.setAdapter(profileDetailAdapter);
+
+        tab_layout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tab_layout.setTabGravity(TabLayout.GRAVITY_CENTER);
+
         tab_layout.addTab(tab_layout.newTab().setText("Collected"));
         tab_layout.addTab(tab_layout.newTab().setText("Created"));
         tab_layout.addTab(tab_layout.newTab().setText("Activity"));

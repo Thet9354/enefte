@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15202B"
+    android:orientation="vertical"
+    tools:context=".UploadNFT.Upload_items_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Items"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload new items*"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="File types supported: JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG, GLB, GLTF, Max size: 40 MB"
+                    android:textColor="#AAB8C2"
+                    android:layout_marginTop="5dp"/>
+
+                <ImageView
+                    android:id="@+id/imgView_uploadNft"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/upload_nft"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/editTxt_nftName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="Name"
+                    android:padding="10dp"
+                    android:textColorHint="#AAB8C2"
+                    android:textColor="#F5F8FA"
+                    android:background="@drawable/custom_input"
+                    android:textSize="14sp"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/editTxt_externalLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="External Link"
+                    android:padding="10dp"
+                    android:textColorHint="#AAB8C2"
+                    android:textColor="#F5F8FA"
+                    android:background="@drawable/custom_input"
+                    android:textSize="14sp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="enefte will include a link to this URL on this itern's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details."
+                    android:textColor="#AAB8C2"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/editTxt_nftBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:ems="10"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="Bio"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:textColorHint="#AAB8C2"
+                    android:textColor="#F5F8FA"
+                    android:background="@drawable/custom_input"
+                    android:textSize="14sp"
+                    android:layout_marginTop="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:padding="10dp"
+                    android:text="Next"
+                    app:cornerRadius="10dp"
+                    android:backgroundTint="#1D9BF0"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -224,15 +224,21 @@
 
     </LinearLayout>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        app:tabInlineLabel="true"
-        app:tabTextColor="#AAB8C2"
-        app:tabIndicatorColor="#1D9BF0"
-        app:tabSelectedTextColor="@color/white" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:tabInlineLabel="true"
+            app:tabTextColor="#AAB8C2"
+            app:tabIndicatorColor="#1D9BF0"
+            app:tabSelectedTextColor="@color/white" />
+
+    </HorizontalScrollView>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
